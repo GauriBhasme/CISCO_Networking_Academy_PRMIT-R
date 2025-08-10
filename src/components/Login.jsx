@@ -10,7 +10,7 @@ const Login = () => {
 
   return (
     <>
-    <Navbar></Navbar>
+  
     <AuthForm title="Login" onSubmit={handleLogin}>
       <input type="email" placeholder="Email" required />
       <input type="password" placeholder="Password" required />

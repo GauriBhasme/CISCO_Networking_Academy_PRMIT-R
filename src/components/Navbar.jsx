@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Navbar.css"; // Assuming you have a CSS file for styling
+import "../styles/Navbar.css";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 768);
@@ -16,8 +18,13 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navLinks = ["Home", "Events", "About", "Contact Us"];
-  
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Events", path: "/events" },
+    { name: "About", path: "/about" },
+    { name: "Contact Us", path: "/contact" },
+  ];
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -29,12 +36,20 @@ const Navbar = () => {
       {!isMobile && (
         <div className="navbar-links">
           {navLinks.map((link, idx) => (
-            <a href={`#${link.toLowerCase().replace(" ", "-")}`} key={idx}>
-              {link}
-            </a>
+            <Link
+              key={idx}
+              to={link.path}
+              className={location.pathname === link.path ? "active-link" : ""}
+            >
+              {link.name}
+            </Link>
           ))}
-          <a href="#login" className="login-link">Login</a>
-          <button className="register-btn">Register</button>
+          <Link to="/login" className="login-link">
+            Login
+          </Link>
+          <Link to="/register">
+            <button className="register-btn">Register</button>
+          </Link>
         </div>
       )}
 
@@ -59,12 +74,25 @@ const Navbar = () => {
           </div>
           <div className="mobile-menu-links">
             {navLinks.map((link, idx) => (
-              <a href={`#${link.toLowerCase().replace(" ", "-")}`} key={idx} onClick={() => setIsMenuOpen(false)}>
-                {link}
-              </a>
+              <Link
+                key={idx}
+                to={link.path}
+                onClick={() => setIsMenuOpen(false)}
+                className={location.pathname === link.path ? "active-link" : ""}
+              >
+                {link.name}
+              </Link>
             ))}
-            <a href="#login" className="login-link">Login</a>
-            <button className="register-btn">Register</button>
+            <Link
+              to="/login"
+              className="login-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Login
+            </Link>
+            <Link to="/register" onClick={() => setIsMenuOpen(false)}>
+              <button className="register-btn">Register</button>
+            </Link>
           </div>
         </div>
       )}

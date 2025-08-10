@@ -1,26 +1,28 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-import './App.css'
-// import FeatureCard from './components/FeatureCard'
-// import {Network} from 'lucide-react';
-// import TeamMember from './components/TeamMember'
-import SocialHandles from './components/SocialHandles'
-import Location from './components/Location'
-import ContactInfo from './components/ContactInfo'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Events from "./pages/Events";
+import Contact from "./pages/Contact";
+import LoginPage from "./pages/LoginPage";
+import Register from "./pages/RegisterPage";
+import Footer from "./components/Footer";
 
 function App() {
-
-
   return (
-    <>
-    <ContactInfo />
-      
-      <SocialHandles />
-      <Location />
-      
-
-    </>
-  )
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+      <Footer></Footer>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,27 @@
+.events-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.events-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .events-list {
+    padding: 1rem;
+  }
+}

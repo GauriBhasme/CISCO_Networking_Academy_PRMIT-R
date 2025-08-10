@@ -10,7 +10,7 @@ const Register = () => {
 
   return (
     <>
-    <Navbar></Navbar>
+    
     <AuthForm title="Register" onSubmit={handleRegister}>
       <input type="text" placeholder="Full Name" required />
       <input type="email" placeholder="Email" required />
