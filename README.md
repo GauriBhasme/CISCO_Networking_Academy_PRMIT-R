@@ -1,7 +1,5 @@
 
-markdown
-Copy
-Edit
+
 # CISCO Networking Academy @ PRMIT&R Campus Website
 
 This is the official website for the **CISCO Networking Academy** at PRMIT&R Campus.  
@@ -50,14 +48,14 @@ src/
 1. **Clone the Repository**
 ```bash
 git clone https://github.com/GauriBhasme/CISCO_Networking_Academy_PRMIT-R.git
-Navigate to the Project Directory
 ```
 
+2. **Navigate to the Project Directory**
 ```bash
 cd CISCO_Networking_Academy_PRMIT-R
 ```
 
-Install Dependencies
+3. **Install Dependencies**
 ```bash
 npm install
 ```
