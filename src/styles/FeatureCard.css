@@ -1,0 +1,47 @@
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 320px;
+  margin: auto;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+  background: #3b82f6;
+  color: white;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin: 0 auto 12px auto;
+}
+
+.feature-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 8px 0;
+  color: #111827;
+}
+
+.feature-description {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .feature-card {
+    max-width: 100%;
+  }
+}
