@@ -1,0 +1,28 @@
+.event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event-details {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.event-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.event-details strong {
+  color: #4a90e2;
+}

@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/f
 const SocialHandles = () => {
   const socials = [
     { icon: <FaFacebookF />, link: "#" },
-    { icon: <FaInstagram />, link: "#" },
+    { icon: <FaInstagram />, link: "https://www.instagram.com/cisco_prmitr/?hl=en" },
     { icon: <FaTwitter />, link: "#" },
     { icon: <FaLinkedinIn />, link: "#" },
   ];

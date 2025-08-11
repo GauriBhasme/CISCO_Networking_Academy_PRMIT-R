@@ -1,15 +1,16 @@
-
+import { useNavigate } from "react-router-dom";
 import Filter from "../components/Filter";
 import EventCard from "../components/EventCard";
-import Banner from "../components/Banner"; 
-import "../styles/Events.css"; // for layout styling
+import Banner from "../components/Banner";
+import "../styles/Events.css";
 
 const Events = () => {
-  // Sample array of event objects
+  const navigate = useNavigate();
+
   const eventsData = [
     {
       id: 1,
-      image: "https://source.unsplash.com/600x400/?concert,music",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRctGbRNi6ZaFG9Mx1lkb6lLqAnJjoOz4Lcw&s",
       category: "Music",
       title: "Summer Beats Festival",
       description:
@@ -21,7 +22,7 @@ const Events = () => {
     },
     {
       id: 2,
-      image: "https://source.unsplash.com/600x400/?tech,conference",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTczYnfyPBFS5giA9Abj9wYRmnFtQm1e0Hryg&s",
       category: "Technology",
       title: "Tech Innovators Summit",
       description:
@@ -33,7 +34,7 @@ const Events = () => {
     },
     {
       id: 3,
-      image: "https://source.unsplash.com/600x400/?food,festival",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuQ8PsJLs2aks_zs6tsC6soH5M3pGfBCOHNw&s",
       category: "Food",
       title: "Global Flavors Food Fest",
       description:
@@ -47,8 +48,10 @@ const Events = () => {
 
   return (
     <div className="events-page">
-     
-      <Banner title='Upcoming Events' description='Explore the latest events happening near you!' />
+      <Banner
+        title="Upcoming Events"
+        description="Explore the latest events happening near you!"
+      />
       <Filter />
 
       <div className="events-list">
@@ -65,7 +68,11 @@ const Events = () => {
             organizer={event.organizer}
             onRegister={() => alert(`Registering for ${event.title}`)}
             onSave={() => alert(`Saved ${event.title}`)}
-            onDetails={() => alert(`Viewing details for ${event.title}`)}
+            onDetails={() =>
+              navigate(`/event/${encodeURIComponent(event.title)}`, {
+                state: { event },
+              })
+            }
           />
         ))}
       </div>

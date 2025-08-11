@@ -14,6 +14,21 @@
   align-items: center;
 }
 
+
+/* Heading */
+.register-box h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.register-box p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.9;
+  text-align: center;
+}
+
 /* Register box */
 .register-box {
   background: rgba(255, 255, 255, 0.1);
@@ -27,17 +42,8 @@
   margin:1rem;
 }
 
-/* Heading */
-.register-box h2 {
-  margin-bottom: 10px;
-  font-size: 24px;
-}
 
-.register-box p {
-  margin-bottom: 20px;
-  font-size: 14px;
-  opacity: 0.9;
-}
+
 
 /* Input fields */
 .register-box input,

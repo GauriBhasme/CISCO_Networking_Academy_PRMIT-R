@@ -4,3 +4,13 @@
     justify-content: center;
     margin-top:1rem;
 }
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: column;
+    padding: 1rem;
+}

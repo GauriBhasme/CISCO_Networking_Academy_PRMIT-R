@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import LoginPage from "./pages/LoginPage";
 import Register from "./pages/RegisterPage";
 import Footer from "./components/Footer";
+import EventPage from "./pages/EventPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/event/:eventName" element={<EventPage />} />
       </Routes>
       <Footer></Footer>
     </Router>

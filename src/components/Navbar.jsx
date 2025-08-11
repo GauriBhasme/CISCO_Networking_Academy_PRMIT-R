@@ -27,10 +27,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      <Link to="/">
       <div className="navbar-brand">
         <h2>Cisco NetAcad</h2>
         <span>@ Campus</span>
       </div>
+      </Link>
 
       {/* Desktop Menu */}
       {!isMobile && (

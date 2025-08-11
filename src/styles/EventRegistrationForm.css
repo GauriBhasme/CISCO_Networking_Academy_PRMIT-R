@@ -1,0 +1,62 @@
+.event-registration-form {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.event-registration-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4a90e2;
+}
+
+.event-registration-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-registration-form label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.event-registration-form input,
+.event-registration-form select,
+.event-registration-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.event-registration-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3b78c2;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .event-registration-form {
+    padding: 1.5rem;
+  }
+}

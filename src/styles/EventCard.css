@@ -45,7 +45,7 @@
 .event-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 1rem;
   margin-bottom: 12px;
 }
 
